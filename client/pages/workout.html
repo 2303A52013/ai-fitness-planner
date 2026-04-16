@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workout - AI Fitness Planner</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="page-header">
+      <div>
+        <h1>Workout</h1>
+        <p>Track sessions and exercise intensity.</p>
+      </div>
+      <button id="logout" class="logout-button">Logout</button>
+    </div>
+
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="diet.html">Diet</a>
+      <a href="workout.html">Workout</a>
+      <a href="progress.html">Progress</a>
+    </nav>
+
+    <section class="card">
+      <form id="workout-form" class="inline-form">
+        <div class="form-group">
+          <label for="workout-title">Workout title</label>
+          <input id="workout-title" type="text" placeholder="Upper body circuit" required />
+        </div>
+        <div class="form-group">
+          <label for="workout-duration">Duration (minutes)</label>
+          <input id="workout-duration" type="number" placeholder="45" required />
+        </div>
+        <div class="form-group">
+          <label for="workout-intensity">Intensity</label>
+          <select id="workout-intensity">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+        <button type="submit">Add workout</button>
+      </form>
+      <div class="table-card">
+        <h2>Recent workouts</h2>
+        <ul id="workout-list"></ul>
+      </div>
+    </section>
+  </main>
+  <script src="../js/app.js"></script>
+  <script src="../js/workout.js"></script>
+</body>
+</html>
